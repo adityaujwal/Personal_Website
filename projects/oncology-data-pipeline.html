@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Oncology data pipeline covering 10M+ cells with exact-match joins across six tables. Undergraduate research by Aditya Ujwal at Johnson &amp; Johnson.">
+  <meta name="theme-color" content="#f4f1ea">
+  <title>Oncology data pipeline — Aditya Ujwal</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="../index.html">Aditya Ujwal</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" aria-current="page">Projects</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="content">
+    <div class="wrap">
+      <a class="back" href="index.html">← All projects</a>
+      <p class="kicker">Johnson &amp; Johnson · undergraduate data science researcher</p>
+      <h1 class="page-title">Oncology data pipeline</h1>
+      <div class="metrics" aria-label="Key results">
+        <div class="metric">
+          <span class="metric-value">10M+ cells</span>
+          <span class="metric-label">Scale of the oncology dataset</span>
+        </div>
+        <div class="metric">
+          <span class="metric-value">6 tables</span>
+          <span class="metric-label">Exact-match joins</span>
+        </div>
+      </div>
+      <article class="prose section">
+        <h2>Problem</h2>
+        <p>Oncology analysis only works if records from different tables actually refer to the same cells and patients. The raw data was large, high-dimensional, and split across sources that did not join cleanly on their own.</p>
+        <h2>Approach</h2>
+        <p>I built pipelines to clean, join, and transform biomedical tables so downstream modeling sat on a consistent dataset. That included exact-match logic across six tables covering more than 10 million cells, plus checks with statisticians and domain experts so the joins matched clinical assumptions — not just key equality.</p>
+        <h2>Result</h2>
+        <p>Exact match across six tables at 10M+ cells. The cleaned dataset supported analysis of treatment outcomes and survivability rather than stalling in wrangling.</p>
+        <h2>Stack</h2>
+        <ul class="tags">
+          <li>Python</li>
+          <li>SQL</li>
+          <li>Data pipelines</li>
+          <li>Biomedical data</li>
+          <li>Validation</li>
+        </ul>
+        <p class="note">No public repository. Research and employer data stay off this site.</p>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>Aditya Ujwal</span>
+      <span>Site code only — no employer source.</span>
+    </div>
+  </footer>
+</body>
+</html>
