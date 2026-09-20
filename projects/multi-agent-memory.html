@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Multi-agent shared-memory architecture using a vector database, by Aditya Ujwal.">
+  <meta name="theme-color" content="#f4f1ea">
+  <title>Multi-agent shared-memory architecture — Aditya Ujwal</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="../index.html">Aditya Ujwal</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" aria-current="page">Projects</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="content">
+    <div class="wrap">
+      <a class="back" href="index.html">← All projects</a>
+      <p class="kicker">Independent technical project</p>
+      <h1 class="page-title">Multi-agent shared-memory architecture</h1>
+      <div class="metrics" aria-label="Key results">
+        <div class="metric">
+          <span class="metric-value">Shared memory</span>
+          <span class="metric-label">Agents read and write a common store</span>
+        </div>
+        <div class="metric">
+          <span class="metric-value">Vector DB</span>
+          <span class="metric-label">Retrieval instead of isolated chat history</span>
+        </div>
+      </div>
+      <article class="prose section">
+        <h2>Problem</h2>
+        <p>LLM agents that only see their own thread forget what the rest of the system already learned. Work gets duplicated, decisions drift, and later agents cannot retrieve earlier findings.</p>
+        <h2>Approach</h2>
+        <p>I designed a shared-memory layer for a multi-agent setup, backed by a vector database. Agents write findings, decisions, and context into a common store and retrieve relevant pieces later, instead of passing the entire history through prompts or operating in isolation.</p>
+        <h2>Result</h2>
+        <p>A working architecture for shared agent memory via vector retrieval. This page is a write-up only until a public repo is confirmed.</p>
+        <h2>Stack</h2>
+        <ul class="tags">
+          <li>Python</li>
+          <li>LLMs</li>
+          <li>Multi-agent systems</li>
+          <li>Vector database</li>
+        </ul>
+        <p class="note">No repository link yet. Confirm before publishing code.</p>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>Aditya Ujwal</span>
+      <span>Site code only — no employer source.</span>
+    </div>
+  </footer>
+</body>
+</html>

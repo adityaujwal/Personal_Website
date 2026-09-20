@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Scaffolding change-detection pipeline: 0.88 precision, recall, and F1. Patent-pending computer vision work by Aditya Ujwal at Navyug Infosolutions.">
+  <meta name="theme-color" content="#f4f1ea">
+  <title>Scaffolding change-detection pipeline — Aditya Ujwal</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="../index.html">Aditya Ujwal</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" aria-current="page">Projects</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="content">
+    <div class="wrap">
+      <a class="back" href="index.html">← All projects</a>
+      <p class="kicker">Navyug Infosolutions · ML intern · patent-pending</p>
+      <h1 class="page-title">Scaffolding change-detection pipeline</h1>
+      <div class="metrics" aria-label="Key results">
+        <div class="metric">
+          <span class="metric-value">0.88</span>
+          <span class="metric-label">Precision, recall, and F1</span>
+        </div>
+        <div class="metric">
+          <span class="metric-value">Patent-pending</span>
+          <span class="metric-label">No filing number or claims on this site</span>
+        </div>
+      </div>
+      <article class="prose section">
+        <h2>Problem</h2>
+        <p>Industrial scaffolding changes between site visits. Catching what was added or removed by comparing 3D scans by hand is slow and easy to miss. The intern work was to make that comparison systematic.</p>
+        <h2>Approach</h2>
+        <p>I designed a computer vision and LiDAR pipeline that takes time-separated point-cloud scans of the same site, registers them, and flags structural elements that appeared or disappeared. I proposed and scoped the approach independently.</p>
+        <p>This page stays at that conceptual level. Source code, proprietary architecture, client names, and patent claims are not published here.</p>
+        <h2>Result</h2>
+        <p>The pipeline reached 0.88 precision, 0.88 recall, and 0.88 F1 on the change-detection task. Related work is patent-pending.</p>
+        <h2>Stack</h2>
+        <ul class="tags">
+          <li>Python</li>
+          <li>Computer vision</li>
+          <li>LiDAR</li>
+          <li>Point-cloud registration</li>
+          <li>Segmentation</li>
+        </ul>
+        <p class="note">No public repository. Employer IP.</p>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>Aditya Ujwal</span>
+      <span>Site code only — no employer source.</span>
+    </div>
+  </footer>
+</body>
+</html>
