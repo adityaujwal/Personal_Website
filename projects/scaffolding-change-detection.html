@@ -3,67 +3,108 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Scaffolding change-detection pipeline: 0.88 precision, recall, and F1. Patent-pending computer vision work by Aditya Ujwal at Navyug Infosolutions.">
-  <meta name="theme-color" content="#f4f1ea">
+  <meta name="description" content="Scaffolding change detection at Navyug: 0.88 precision, recall, and F1 on 434 components; 7 of 8 real structural changes. Patent-pending; Aditya Ujwal listed as inventor.">
+  <meta name="theme-color" content="#121518">
   <title>Scaffolding change-detection pipeline — Aditya Ujwal</title>
+  <script>(function(){try{var t=localStorage.getItem("au-theme");if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";}document.documentElement.setAttribute("data-theme",t);}catch(e){document.documentElement.setAttribute("data-theme","dark");}})();</script>
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="wordmark" href="../index.html">Aditya Ujwal</a>
+      <a class="wordmark" href="../index.html"><span class="sig">AU</span> Aditya Ujwal</a>
       <nav class="nav" aria-label="Primary">
         <a href="index.html" aria-current="page">Projects</a>
         <a href="../about.html">About</a>
         <a href="../contact.html">Contact</a>
       </nav>
+      <button type="button" class="theme-toggle" data-theme-toggle>
+        <span data-theme-value="dark">Dark</span>
+        <span data-theme-value="light">Light</span>
+      </button>
     </div>
   </header>
   <main id="content">
     <div class="wrap">
       <a class="back" href="index.html">← All projects</a>
-      <p class="kicker">Navyug Infosolutions · ML intern · patent-pending</p>
+      <p class="kicker">Navyug Infosolutions · Software engineering intern · Noida · Jun 2026 – present</p>
       <h1 class="page-title">Scaffolding change-detection pipeline</h1>
-      <div class="metrics" aria-label="Key results">
+      <div class="metrics metrics-3" aria-label="Key results">
         <div class="metric">
+          <span class="metric-id">Locked benchmark</span>
           <span class="metric-value">0.88</span>
-          <span class="metric-label">Precision, recall, and F1</span>
+          <span class="metric-label">Precision, recall, and F1 on 434 components</span>
         </div>
         <div class="metric">
-          <span class="metric-value">Patent-pending</span>
-          <span class="metric-label">No filing number or claims on this site</span>
+          <span class="metric-id">Field check</span>
+          <span class="metric-value">7 of 8</span>
+          <span class="metric-label">Real structural changes recovered</span>
+        </div>
+        <div class="metric">
+          <span class="metric-id">IP</span>
+          <span class="metric-value">Inventor</span>
+          <span class="metric-label">Listed on the pending patent; no filing number here</span>
         </div>
       </div>
+      <figure class="viz">
+        <svg viewBox="0 0 640 160" role="img" aria-label="Pipeline: labeled synthetic scenes, simulated scans, then a highlighted structural delta.">
+          <text x="36" y="28" fill="currentColor" opacity="0.55" font-family="IBM Plex Mono, monospace" font-size="11">SYNTHETIC SCENES</text>
+          <text x="248" y="28" fill="currentColor" opacity="0.55" font-family="IBM Plex Mono, monospace" font-size="11">SIMULATED SCANS</text>
+          <text x="468" y="28" fill="currentColor" opacity="0.55" font-family="IBM Plex Mono, monospace" font-size="11">Δ STRUCTURE</text>
+          <g fill="var(--scan-a)">
+            <circle cx="40" cy="70" r="2.2"/><circle cx="40" cy="92" r="2.2"/><circle cx="40" cy="114" r="2.2"/>
+            <circle cx="68" cy="70" r="2.2"/><circle cx="68" cy="92" r="2.2"/><circle cx="68" cy="114" r="2.2"/>
+            <circle cx="96" cy="70" r="2.2"/><circle cx="96" cy="92" r="2.2"/><circle cx="96" cy="114" r="2.2"/>
+            <circle cx="54" cy="70" r="1.6"/><circle cx="82" cy="70" r="1.6"/>
+            <circle cx="54" cy="114" r="1.6"/><circle cx="82" cy="114" r="1.6"/>
+          </g>
+          <g fill="var(--scan-b)">
+            <circle cx="240" cy="70" r="2.2"/><circle cx="240" cy="92" r="2.2"/><circle cx="240" cy="114" r="2.2"/>
+            <circle cx="268" cy="70" r="2.2"/><circle cx="268" cy="92" r="2.2"/><circle cx="268" cy="114" r="2.2"/>
+            <circle cx="296" cy="70" r="2.2"/><circle cx="296" cy="92" r="2.2"/><circle cx="296" cy="114" r="2.2"/>
+            <circle cx="324" cy="70" r="2.2"/><circle cx="324" cy="92" r="2.2"/><circle cx="324" cy="114" r="2.2"/>
+            <circle cx="254" cy="70" r="1.6"/><circle cx="282" cy="70" r="1.6"/><circle cx="310" cy="70" r="1.6"/>
+          </g>
+          <g fill="var(--accent)">
+            <circle cx="456" cy="70" r="2.6"/><circle cx="456" cy="92" r="2.6"/><circle cx="456" cy="114" r="2.6"/>
+            <circle cx="540" cy="70" r="2.6"/><circle cx="540" cy="92" r="2.6"/><circle cx="540" cy="114" r="2.6"/>
+          </g>
+          <g fill="currentColor" opacity="0.35">
+            <circle cx="484" cy="70" r="2"/><circle cx="484" cy="92" r="2"/><circle cx="484" cy="114" r="2"/>
+            <circle cx="512" cy="70" r="2"/><circle cx="512" cy="92" r="2"/><circle cx="512" cy="114" r="2"/>
+          </g>
+          <path d="M130 92h86" stroke="currentColor" stroke-opacity="0.35" fill="none"/>
+          <path d="M350 92h80" stroke="var(--accent)" stroke-opacity="0.7" fill="none"/>
+        </svg>
+        <figcaption class="viz-label">Labeled scenes → simulated sensor scans → structural delta. Source stays off-site.</figcaption>
+      </figure>
       <article class="prose section">
         <h2>Problem</h2>
-        <p>Industrial scaffolding changes between site visits. Catching what was added or removed by comparing 3D scans by hand is slow and easy to miss. The intern work was to make that comparison systematic.</p>
+        <p>Industrial scaffolding changes between site visits. Catching what was added or removed by walking the structure, or by comparing 3D scans by hand, is slow and easy to miss. The intern work was to make that comparison systematic enough to replace those walkthroughs.</p>
         <h2>Approach</h2>
-        <p>I designed a computer vision and LiDAR pipeline that takes time-separated point-cloud scans of the same site, registers them, and flags structural elements that appeared or disappeared. I proposed and scoped the approach independently.</p>
-        <p>This page stays at that conceptual level. Source code, proprietary architecture, client names, and patent claims are not published here.</p>
+        <p>I built an end-to-end synthetic data pipeline for scaffolding inspection: it generates labeled scenes, simulates sensor scans, and detects structural change. Related work is patent-pending; I am listed as an inventor. Source, architecture internals, and patent claims stay off this site.</p>
+        <p>The problem was not scoped from a desk. I visited one of India’s top ten refineries twice to study how scaffolds are erected and to coordinate with an outside vendor running 3D scans on site. Those visits set the requirements for the change-detection system.</p>
         <h2>Result</h2>
-        <p>The pipeline reached 0.88 precision, 0.88 recall, and 0.88 F1 on the change-detection task. Related work is patent-pending.</p>
-        <h2>Stack</h2>
-        <ul class="tags">
-          <li>Python</li>
-          <li>Computer vision</li>
-          <li>LiDAR</li>
-          <li>Point-cloud registration</li>
-          <li>Segmentation</li>
-        </ul>
-        <p class="note">No public repository. Employer IP.</p>
+        <p>On a locked benchmark of 434 components, the pipeline reached 0.88 precision, 0.88 recall, and 0.88 F1, and correctly recovered 7 of 8 real structural changes.</p>
+        <p>I then piloted the system on-site at the refinery, moving it toward production so engineers get faster, earlier visibility into structural change instead of relying on manual inspection walkthroughs.</p>
+        <h2>Also at Navyug</h2>
+        <h3>Plate tracking at JSW Steel</h3>
+        <p>I set up an on-site camera and OCR system at a JSW steel plant to track plates across the factory floor, working around lighting, occlusion, and camera handoffs.</p>
+        <p class="note">No public repository. Employer IP. No patent filing number on this page.</p>
       </article>
     </div>
   </main>
   <footer class="site-footer">
     <div class="footer-inner">
       <span>Aditya Ujwal</span>
-      <span>Site code only — no employer source.</span>
+      <span>No employer source on this site</span>
     </div>
   </footer>
+  <script src="../js/theme.js"></script>
 </body>
 </html>

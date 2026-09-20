@@ -3,65 +3,83 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="WendWay: Aditya Ujwal co-founded an AI-compliance product for education, shipped a FastAPI backend, and piloted it with universities.">
-  <meta name="theme-color" content="#f4f1ea">
+  <meta name="description" content="WendWay: Aditya Ujwal co-founded a writing-integrity product for higher education, led backend development as COO, and piloted it with universities. Jun 2024 – Oct 2025.">
+  <meta name="theme-color" content="#121518">
   <title>WendWay — Aditya Ujwal</title>
+  <script>(function(){try{var t=localStorage.getItem("au-theme");if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";}document.documentElement.setAttribute("data-theme",t);}catch(e){document.documentElement.setAttribute("data-theme","dark");}})();</script>
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="wordmark" href="../index.html">Aditya Ujwal</a>
+      <a class="wordmark" href="../index.html"><span class="sig">AU</span> Aditya Ujwal</a>
       <nav class="nav" aria-label="Primary">
         <a href="index.html" aria-current="page">Projects</a>
         <a href="../about.html">About</a>
         <a href="../contact.html">Contact</a>
       </nav>
+      <button type="button" class="theme-toggle" data-theme-toggle>
+        <span data-theme-value="dark">Dark</span>
+        <span data-theme-value="light">Light</span>
+      </button>
     </div>
   </header>
   <main id="content">
     <div class="wrap">
       <a class="back" href="index.html">← All projects</a>
-      <p class="kicker">WendWay · co-founder, COO, developer</p>
+      <p class="kicker">WendWay · Co-founder &amp; COO · Jun 2024 – Oct 2025</p>
       <h1 class="page-title">WendWay</h1>
       <div class="metrics" aria-label="Key results">
         <div class="metric">
+          <span class="metric-id">Path</span>
           <span class="metric-value">Research → product</span>
-          <span class="metric-label">Compliance tooling shipped, not just a paper</span>
+          <span class="metric-label">Peer-reviewed compliance work shipped as software</span>
         </div>
         <div class="metric">
+          <span class="metric-id">Field</span>
           <span class="metric-value">University pilots</span>
-          <span class="metric-label">Iterated with academic stakeholders</span>
+          <span class="metric-label">Iterated with instructors and students</span>
         </div>
       </div>
+      <figure class="viz">
+        <svg viewBox="0 0 640 140" role="img" aria-label="Flow from JMHC compliance research through a backend to university pilots.">
+          <rect x="16" y="40" width="160" height="56" fill="none" stroke="currentColor" stroke-opacity="0.4"/>
+          <rect x="240" y="40" width="160" height="56" fill="none" stroke="currentColor" stroke-opacity="0.4"/>
+          <rect x="464" y="40" width="160" height="56" fill="none" stroke="var(--accent)"/>
+          <text x="36" y="64" fill="currentColor" opacity="0.7" font-family="IBM Plex Mono, monospace" font-size="11">JMHC RESEARCH</text>
+          <text x="36" y="80" fill="currentColor" opacity="0.45" font-family="IBM Plex Mono, monospace" font-size="10">Under peer review</text>
+          <text x="260" y="64" fill="currentColor" opacity="0.7" font-family="IBM Plex Mono, monospace" font-size="11">BACKEND</text>
+          <text x="260" y="80" fill="currentColor" opacity="0.45" font-family="IBM Plex Mono, monospace" font-size="10">Main engineer</text>
+          <text x="484" y="64" fill="var(--accent)" font-family="IBM Plex Mono, monospace" font-size="11">PILOTS</text>
+          <text x="484" y="80" fill="currentColor" opacity="0.55" font-family="IBM Plex Mono, monospace" font-size="10">Universities</text>
+          <path d="M176 68h64" stroke="currentColor" stroke-opacity="0.35" fill="none"/>
+          <path d="M400 68h64" stroke="var(--accent)" stroke-opacity="0.8" fill="none"/>
+        </svg>
+        <figcaption class="viz-label">Research → deployed writing-integrity product → school pilots.</figcaption>
+      </figure>
       <article class="prose section">
         <h2>Problem</h2>
-        <p>Universities adopting AI needed a practical way to check policies and compliance workflows. Research notes were not enough; schools needed something they could actually run.</p>
+        <p>Universities adopting AI needed a practical way to handle writing integrity. Research notes were not enough; schools needed something instructors and students could actually run.</p>
         <h2>Approach</h2>
-        <p>I co-founded WendWay as an early-stage company around ethical-AI compliance for education. On the engineering side I built a FastAPI backend for policy validation and compliance workflows. On the operations side I ran the product through pilot evaluations with academic stakeholders and changed the system from their feedback.</p>
+        <p>The product started as a research project I led at the JMHC Center for Applied AI &amp; Philanthropy (AI research intern, part-time, February 2024 – present). That work is under peer review. I co-founded WendWay to take the findings and ship a writing-integrity product for higher education.</p>
+        <p>I served as COO and as the platform’s main backend engineer. In a small early-stage team I also handled hiring, fundraising conversations, partnerships, and day-to-day go-to-market calls. We piloted with real universities and kept iterating from instructor and student feedback.</p>
         <h2>Result</h2>
-        <p>A deployed product, piloted with universities — compliance research that left the research stage.</p>
-        <h2>Stack</h2>
-        <ul class="tags">
-          <li>Python</li>
-          <li>FastAPI</li>
-          <li>Backend APIs</li>
-          <li>AI compliance</li>
-        </ul>
-        <p class="note">No public repository on this page yet. If a write-up-safe repo goes live, it will be linked here.</p>
+        <p>A deployed product, piloted with universities — compliance research that left the lab. I was with the company from June 2024 through October 2025.</p>
+        <p class="note">No public repository.</p>
       </article>
     </div>
   </main>
   <footer class="site-footer">
     <div class="footer-inner">
       <span>Aditya Ujwal</span>
-      <span>Site code only — no employer source.</span>
+      <span>No employer source on this site</span>
     </div>
   </footer>
+  <script src="../js/theme.js"></script>
 </body>
 </html>

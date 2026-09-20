@@ -21,7 +21,7 @@ Open http://localhost:8080
 
 ## Resume PDF
 
-Contact currently emails for the resume so the live site has no 404. To host it: add `resume.pdf` at the repo root and change the Contact resume row to `<a href="resume.pdf">Download PDF</a>`.
+`Aditya_Ujwal_Resume.pdf` is linked from Home and Contact.
 
 ## Deploy (v1)
 

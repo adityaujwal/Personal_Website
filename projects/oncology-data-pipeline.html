@@ -3,57 +3,87 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Oncology data pipeline covering 10M+ cells with exact-match joins across six tables. Undergraduate research by Aditya Ujwal at Johnson &amp; Johnson.">
-  <meta name="theme-color" content="#f4f1ea">
+  <meta name="description" content="Oncology clinical-trial pipeline at Johnson &amp; Johnson / The Data Mine: exact match across 6 tables and 10M+ cells, then Cox PH and LASSO survival models. Aditya Ujwal, undergraduate AI developer.">
+  <meta name="theme-color" content="#121518">
   <title>Oncology data pipeline — Aditya Ujwal</title>
+  <script>(function(){try{var t=localStorage.getItem("au-theme");if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";}document.documentElement.setAttribute("data-theme",t);}catch(e){document.documentElement.setAttribute("data-theme","dark");}})();</script>
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="wordmark" href="../index.html">Aditya Ujwal</a>
+      <a class="wordmark" href="../index.html"><span class="sig">AU</span> Aditya Ujwal</a>
       <nav class="nav" aria-label="Primary">
         <a href="index.html" aria-current="page">Projects</a>
         <a href="../about.html">About</a>
         <a href="../contact.html">Contact</a>
       </nav>
+      <button type="button" class="theme-toggle" data-theme-toggle>
+        <span data-theme-value="dark">Dark</span>
+        <span data-theme-value="light">Light</span>
+      </button>
     </div>
   </header>
   <main id="content">
     <div class="wrap">
       <a class="back" href="index.html">← All projects</a>
-      <p class="kicker">Johnson &amp; Johnson · undergraduate data science researcher</p>
+      <p class="kicker">The Data Mine · Johnson &amp; Johnson · Undergraduate AI developer · Aug 2025 – May 2026</p>
       <h1 class="page-title">Oncology data pipeline</h1>
-      <div class="metrics" aria-label="Key results">
+      <div class="metrics metrics-3" aria-label="Key results">
         <div class="metric">
+          <span class="metric-id">Scale</span>
           <span class="metric-value">10M+ cells</span>
-          <span class="metric-label">Scale of the oncology dataset</span>
+          <span class="metric-label">Oncology clinical-trial data</span>
         </div>
         <div class="metric">
+          <span class="metric-id">Spec</span>
           <span class="metric-value">6 tables</span>
-          <span class="metric-label">Exact-match joins</span>
+          <span class="metric-label">Matched reference outputs exactly</span>
+        </div>
+        <div class="metric">
+          <span class="metric-id">Models</span>
+          <span class="metric-value">Cox PH</span>
+          <span class="metric-label">LASSO survival models in Python</span>
         </div>
       </div>
+      <figure class="viz">
+        <svg viewBox="0 0 640 170" role="img" aria-label="Six source tables joining into one validated oncology dataset, then survival models.">
+          <g fill="none" stroke="currentColor" stroke-opacity="0.35">
+            <rect x="16" y="36" width="72" height="36"/>
+            <rect x="104" y="36" width="72" height="36"/>
+            <rect x="192" y="36" width="72" height="36"/>
+            <rect x="16" y="88" width="72" height="36"/>
+            <rect x="104" y="88" width="72" height="36"/>
+            <rect x="192" y="88" width="72" height="36"/>
+            <rect x="456" y="40" width="168" height="84"/>
+            <path d="M264 54h80 L456 62"/>
+            <path d="M264 106h80 L456 102"/>
+          </g>
+          <text x="28" y="58" fill="currentColor" opacity="0.7" font-family="IBM Plex Mono, monospace" font-size="10">T1</text>
+          <text x="116" y="58" fill="currentColor" opacity="0.7" font-family="IBM Plex Mono, monospace" font-size="10">T2</text>
+          <text x="204" y="58" fill="currentColor" opacity="0.7" font-family="IBM Plex Mono, monospace" font-size="10">T3</text>
+          <text x="28" y="110" fill="currentColor" opacity="0.7" font-family="IBM Plex Mono, monospace" font-size="10">T4</text>
+          <text x="116" y="110" fill="currentColor" opacity="0.7" font-family="IBM Plex Mono, monospace" font-size="10">T5</text>
+          <text x="204" y="110" fill="currentColor" opacity="0.7" font-family="IBM Plex Mono, monospace" font-size="10">T6</text>
+          <text x="476" y="72" fill="var(--accent)" font-family="IBM Plex Mono, monospace" font-size="11">EXACT MATCH</text>
+          <text x="476" y="90" fill="currentColor" opacity="0.55" font-family="IBM Plex Mono, monospace" font-size="10">10M+ CELLS</text>
+          <text x="476" y="108" fill="currentColor" opacity="0.55" font-family="IBM Plex Mono, monospace" font-size="10">COX PH · LASSO</text>
+        </svg>
+        <figcaption class="viz-label">Six tables · spec match · survival models. Patient-level data stays off-site.</figcaption>
+      </figure>
       <article class="prose section">
         <h2>Problem</h2>
-        <p>Oncology analysis only works if records from different tables actually refer to the same cells and patients. The raw data was large, high-dimensional, and split across sources that did not join cleanly on their own.</p>
+        <p>Oncology analysis only works if records from different tables actually refer to the same cells and patients, and if the transformed outputs match a known spec. The data was clinical-trial scale — high-dimensional, split across sources, and large enough that silent join errors would poison anything downstream.</p>
         <h2>Approach</h2>
-        <p>I built pipelines to clean, join, and transform biomedical tables so downstream modeling sat on a consistent dataset. That included exact-match logic across six tables covering more than 10 million cells, plus checks with statisticians and domain experts so the joins matched clinical assumptions — not just key equality.</p>
+        <p>As an undergraduate AI developer in Purdue’s Data Mine partnership with Johnson &amp; Johnson, I built a spec-driven pipeline for oncology clinical-trial data. The pipeline had to match reference outputs exactly across six tables and more than 10 million cells. I worked with statisticians to validate the assumptions behind those matches — not just key equality.</p>
+        <p>On the cleaned set I modeled patient outcomes across treatment regimens using Cox proportional hazards and LASSO survival models in Python, and presented the results to clinical stakeholders.</p>
         <h2>Result</h2>
-        <p>Exact match across six tables at 10M+ cells. The cleaned dataset supported analysis of treatment outcomes and survivability rather than stalling in wrangling.</p>
-        <h2>Stack</h2>
-        <ul class="tags">
-          <li>Python</li>
-          <li>SQL</li>
-          <li>Data pipelines</li>
-          <li>Biomedical data</li>
-          <li>Validation</li>
-        </ul>
+        <p>Exact match to reference outputs across six tables at 10M+ cells. Downstream modeling of treatment outcomes sat on that spec rather than stalling in wrangling. Patient data and research internals stay off this site.</p>
         <p class="note">No public repository. Research and employer data stay off this site.</p>
       </article>
     </div>
@@ -61,8 +91,9 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <span>Aditya Ujwal</span>
-      <span>Site code only — no employer source.</span>
+      <span>No employer source on this site</span>
     </div>
   </footer>
+  <script src="../js/theme.js"></script>
 </body>
 </html>

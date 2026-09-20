@@ -3,65 +3,92 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Multi-agent shared-memory architecture using a vector database, by Aditya Ujwal.">
-  <meta name="theme-color" content="#f4f1ea">
-  <title>Multi-agent shared-memory architecture — Aditya Ujwal</title>
+  <meta name="description" content="Multi-Agent Research &amp; Analysis Team: a LangGraph demo where Researcher, Analyst, Critic, and Coordinator share an Endee workspace. By Aditya Ujwal.">
+  <meta name="theme-color" content="#121518">
+  <title>Multi-Agent Research &amp; Analysis Team — Aditya Ujwal</title>
+  <script>(function(){try{var t=localStorage.getItem("au-theme");if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";}document.documentElement.setAttribute("data-theme",t);}catch(e){document.documentElement.setAttribute("data-theme","dark");}})();</script>
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="wordmark" href="../index.html">Aditya Ujwal</a>
+      <a class="wordmark" href="../index.html"><span class="sig">AU</span> Aditya Ujwal</a>
       <nav class="nav" aria-label="Primary">
         <a href="index.html" aria-current="page">Projects</a>
         <a href="../about.html">About</a>
         <a href="../contact.html">Contact</a>
       </nav>
+      <button type="button" class="theme-toggle" data-theme-toggle>
+        <span data-theme-value="dark">Dark</span>
+        <span data-theme-value="light">Light</span>
+      </button>
     </div>
   </header>
   <main id="content">
     <div class="wrap">
       <a class="back" href="index.html">← All projects</a>
-      <p class="kicker">Independent technical project</p>
-      <h1 class="page-title">Multi-agent shared-memory architecture</h1>
-      <div class="metrics" aria-label="Key results">
+      <p class="kicker">Independent technical project · LangGraph demo</p>
+      <h1 class="page-title">Multi-Agent Research &amp; Analysis Team</h1>
+      <div class="metrics metrics-3" aria-label="Key results">
         <div class="metric">
-          <span class="metric-value">Shared memory</span>
-          <span class="metric-label">Agents read and write a common store</span>
+          <span class="metric-id">Graph</span>
+          <span class="metric-value">LangGraph</span>
+          <span class="metric-label">Coordinator routes Researcher, Analyst, Critic</span>
         </div>
         <div class="metric">
-          <span class="metric-value">Vector DB</span>
-          <span class="metric-label">Retrieval instead of isolated chat history</span>
+          <span class="metric-id">Memory</span>
+          <span class="metric-value">Endee</span>
+          <span class="metric-label">Shared workspace, not just message passing</span>
+        </div>
+        <div class="metric">
+          <span class="metric-id">Status</span>
+          <span class="metric-value">Phases 1–6</span>
+          <span class="metric-label">Memory → live graph → benchmarks → write-up</span>
         </div>
       </div>
+      <figure class="viz">
+        <svg viewBox="0 0 640 240" role="img" aria-label="Coordinator routes Researcher, Analyst, and Critic through a shared Endee workspace.">
+          <rect x="220" y="12" width="200" height="40" fill="none" stroke="currentColor" stroke-opacity="0.45"/>
+          <text x="320" y="38" text-anchor="middle" fill="currentColor" opacity="0.8" font-family="IBM Plex Mono, monospace" font-size="12">COORDINATOR</text>
+          <line x1="320" y1="52" x2="320" y2="78" stroke="currentColor" stroke-opacity="0.35"/>
+          <circle cx="320" cy="120" r="40" fill="none" stroke="var(--accent)"/>
+          <text x="320" y="116" text-anchor="middle" fill="var(--accent)" font-family="IBM Plex Mono, monospace" font-size="12">ENDEE</text>
+          <text x="320" y="134" text-anchor="middle" fill="currentColor" opacity="0.5" font-family="IBM Plex Mono, monospace" font-size="10">WORKSPACE</text>
+          <rect x="16" y="100" width="150" height="40" fill="none" stroke="currentColor" stroke-opacity="0.4"/>
+          <text x="91" y="125" text-anchor="middle" fill="currentColor" opacity="0.75" font-family="IBM Plex Mono, monospace" font-size="12">RESEARCHER</text>
+          <line x1="166" y1="120" x2="280" y2="120" stroke="currentColor" stroke-opacity="0.35"/>
+          <rect x="474" y="100" width="150" height="40" fill="none" stroke="currentColor" stroke-opacity="0.4"/>
+          <text x="549" y="125" text-anchor="middle" fill="currentColor" opacity="0.75" font-family="IBM Plex Mono, monospace" font-size="12">CRITIC</text>
+          <line x1="360" y1="120" x2="474" y2="120" stroke="var(--accent)" stroke-opacity="0.7"/>
+          <line x1="320" y1="160" x2="320" y2="186" stroke="currentColor" stroke-opacity="0.35"/>
+          <rect x="220" y="186" width="200" height="40" fill="none" stroke="currentColor" stroke-opacity="0.4"/>
+          <text x="320" y="211" text-anchor="middle" fill="currentColor" opacity="0.75" font-family="IBM Plex Mono, monospace" font-size="12">ANALYST</text>
+        </svg>
+        <figcaption class="viz-label">Shared workspace of findings, hypotheses, contradictions, and decisions. Coordinator can preempt to the Critic when those conflict.</figcaption>
+      </figure>
       <article class="prose section">
         <h2>Problem</h2>
-        <p>LLM agents that only see their own thread forget what the rest of the system already learned. Work gets duplicated, decisions drift, and later agents cannot retrieve earlier findings.</p>
+        <p>LLM agents that only pass messages forget what the rest of the team already learned. Work gets duplicated, contradictions sit unnoticed, and the final brief is whatever happened to be in the last thread.</p>
         <h2>Approach</h2>
-        <p>I designed a shared-memory layer for a multi-agent setup, backed by a vector database. Agents write findings, decisions, and context into a common store and retrieve relevant pieces later, instead of passing the entire history through prompts or operating in isolation.</p>
+        <p>I built a LangGraph demo in which a Coordinator routes Researcher, Analyst, and Critic agents on research tasks. They do not only chat. They read and write a shared workspace — findings, hypotheses, contradictions, decisions — so later steps can reuse prior work, flag conflicts, and consolidate into a brief.</p>
+        <p>Memory is an Endee-backed SharedMemoryManager, with a NullMemoryManager for isolated benchmarks. The Coordinator can preempt to the Critic when the workspace shows contradictions. A mock LLM path runs the demo without a live model. A Streamlit panel shows workspace timelines. Benchmarks and threshold-tuning scripts sit next to a blog post and a demo notebook.</p>
         <h2>Result</h2>
-        <p>A working architecture for shared agent memory via vector retrieval. This page is a write-up only until a public repo is confirmed.</p>
-        <h2>Stack</h2>
-        <ul class="tags">
-          <li>Python</li>
-          <li>LLMs</li>
-          <li>Multi-agent systems</li>
-          <li>Vector database</li>
-        </ul>
-        <p class="note">No repository link yet. Confirm before publishing code.</p>
+        <p>Phases 1–6 are largely done: memory wiring, a live graph, benchmarks, and the write-up/demo. Two caveats I would mention in an interview: the cold-start Endee wipe was not fully validated, and duplicate-work metrics are not meaningful under the mock LLM.</p>
+        <p class="note">No public repository.</p>
       </article>
     </div>
   </main>
   <footer class="site-footer">
     <div class="footer-inner">
       <span>Aditya Ujwal</span>
-      <span>Site code only — no employer source.</span>
+      <span>No employer source on this site</span>
     </div>
   </footer>
+  <script src="../js/theme.js"></script>
 </body>
 </html>

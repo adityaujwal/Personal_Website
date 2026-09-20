@@ -3,40 +3,70 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Aditya Ujwal — Purdue CS (Honors College), graduating December 2026. Focus on machine learning, computer vision, and applied LLM systems.">
-  <meta name="theme-color" content="#f4f1ea">
+  <meta name="description" content="Aditya Ujwal — B.Sc. Computer Science at Purdue (Honors College), GPA 3.5, graduating December 2026.">
+  <meta name="theme-color" content="#121518">
   <title>About — Aditya Ujwal</title>
+  <script>(function(){try{var t=localStorage.getItem("au-theme");if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";}document.documentElement.setAttribute("data-theme",t);}catch(e){document.documentElement.setAttribute("data-theme","dark");}})();</script>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="wordmark" href="index.html">Aditya Ujwal</a>
+      <a class="wordmark" href="index.html"><span class="sig">AU</span> Aditya Ujwal</a>
       <nav class="nav" aria-label="Primary">
         <a href="projects/index.html">Projects</a>
         <a href="about.html" aria-current="page">About</a>
         <a href="contact.html">Contact</a>
       </nav>
+      <button type="button" class="theme-toggle" data-theme-toggle>
+        <span data-theme-value="dark">Dark</span>
+        <span data-theme-value="light">Light</span>
+      </button>
     </div>
   </header>
   <main id="content">
     <div class="wrap">
       <h1 class="page-title">About</h1>
       <div class="prose">
-        <p>I’m a Computer Science student at Purdue University in the John Martinson Honors College, graduating December 2026. Dean’s List and Semester Honors.</p>
-        <p>Most of my recent work sits at the intersection of machine learning and production data: computer vision on LiDAR scans, biomedical pipelines that have to join cleanly, and LLM systems that need shared state. I care more about a result you can quote than a demo that only works once.</p>
-        <p>Outside technical projects I serve as Secretary and Treasurer for Campus4Vets at Purdue, including work that helped secure a $3,000 grant for campus programming. That leadership work stays off the projects index on purpose — this site is the technical record for applications.</p>
-        <h2>Focus</h2>
-        <ul>
-          <li>Computer vision and 3D / LiDAR pipelines</li>
-          <li>Biomedical and tabular data systems</li>
-          <li>Applied LLMs and multi-agent architectures</li>
-        </ul>
+        <p>I’m a Computer Science student at Purdue University in the John Martinson Honors College, graduating December 2026. GPA 3.5. West Lafayette, IN.</p>
+        <p>Most of my recent work sits at the intersection of machine learning and production data: synthetic data and computer vision for industrial inspection, biomedical pipelines that have to match a spec exactly, and LLM systems that need shared state. I care more about a result you can quote than a demo that only works once.</p>
+        <h2>Education</h2>
+        <p>B.Sc. in Computer Science, Purdue University, August 2023 – December 2026. Coursework includes Data Mining and Machine Learning, Introduction to AI, Analysis of Algorithms, Data Structures and Algorithms, and Systems Programming. English and Hindi fluent; French in progress.</p>
+        <h2>Experience</h2>
+      </div>
+      <ul class="role-list">
+        <li>
+          <p class="meta">Navyug Infosolutions · Noida, India · Jun 2026 – present</p>
+          <h3>Software engineering intern</h3>
+          <p>Patent-pending change detection for scaffolding, plus on-site computer vision at a steel plant. <a href="projects/scaffolding-change-detection.html">Write-up</a>.</p>
+        </li>
+        <li>
+          <p class="meta">The Data Mine · Johnson &amp; Johnson · West Lafayette, IN · Aug 2025 – May 2026</p>
+          <h3>Undergraduate AI developer</h3>
+          <p>Oncology trial pipeline and survival models. <a href="projects/oncology-data-pipeline.html">Write-up</a>.</p>
+        </li>
+        <li>
+          <p class="meta">WendWay · West Lafayette, IN · Jun 2024 – Oct 2025</p>
+          <h3>Co-founder &amp; COO</h3>
+          <p>Writing-integrity product for higher education; main backend engineer. <a href="projects/wendway.html">Write-up</a>.</p>
+        </li>
+        <li>
+          <p class="meta">JMHC Center for Applied AI &amp; Philanthropy · Feb 2024 – present</p>
+          <h3>AI research intern (part-time)</h3>
+          <p>Led an AI-compliance research project, now under peer review. That work became WendWay.</p>
+        </li>
+        <li>
+          <p class="meta">Campus4Vets · Mar 2025 – present</p>
+          <h3>Secretary, interim treasurer · Lead Forward Fellow</h3>
+          <p>Managed the budget and secured a $3,000 grant for programming that connects students with veterans. Leadership stays off the projects index — this site is the technical record.</p>
+        </li>
+      </ul>
+      <div class="prose">
         <h2>Skills</h2>
       </div>
       <div class="skill-groups">
@@ -44,17 +74,22 @@
           <h3>Languages &amp; tools</h3>
           <ul class="tags">
             <li>Python</li>
+            <li>Java</li>
             <li>SQL</li>
             <li>Git</li>
-            <li>FastAPI</li>
+            <li>LaTeX</li>
+            <li>React</li>
+            <li>Next.js</li>
+            <li>Docker</li>
           </ul>
         </div>
         <div>
           <h3>Machine learning</h3>
           <ul class="tags">
             <li>Computer vision</li>
-            <li>LiDAR / point clouds</li>
-            <li>Classical ML</li>
+            <li>Synthetic data</li>
+            <li>OCR</li>
+            <li>Cox PH / LASSO</li>
             <li>LLMs</li>
             <li>Vector databases</li>
           </ul>
@@ -63,8 +98,7 @@
           <h3>Data &amp; systems</h3>
           <ul class="tags">
             <li>Data pipelines</li>
-            <li>Join / validation logic</li>
-            <li>Biomedical datasets</li>
+            <li>Clinical-trial data</li>
             <li>Backend APIs</li>
           </ul>
         </div>
@@ -74,8 +108,9 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <span>Aditya Ujwal</span>
-      <span>Site code only — no employer source.</span>
+      <span>No employer source on this site</span>
     </div>
   </footer>
+  <script src="js/theme.js"></script>
 </body>
 </html>

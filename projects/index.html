@@ -3,25 +3,30 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Projects by Aditya Ujwal: scaffolding change detection (0.88 F1), oncology data pipeline (10M+ cells), WendWay, and multi-agent shared memory.">
-  <meta name="theme-color" content="#f4f1ea">
+  <meta name="description" content="Projects by Aditya Ujwal: scaffolding change detection (0.88 F1), J&amp;J oncology pipeline, WendWay, LangGraph multi-agent team, and real_work.">
+  <meta name="theme-color" content="#121518">
   <title>Projects — Aditya Ujwal</title>
+  <script>(function(){try{var t=localStorage.getItem("au-theme");if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";}document.documentElement.setAttribute("data-theme",t);}catch(e){document.documentElement.setAttribute("data-theme","dark");}})();</script>
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="wordmark" href="../index.html">Aditya Ujwal</a>
+      <a class="wordmark" href="../index.html"><span class="sig">AU</span> Aditya Ujwal</a>
       <nav class="nav" aria-label="Primary">
         <a href="index.html" aria-current="page">Projects</a>
         <a href="../about.html">About</a>
         <a href="../contact.html">Contact</a>
       </nav>
+      <button type="button" class="theme-toggle" data-theme-toggle>
+        <span data-theme-value="dark">Dark</span>
+        <span data-theme-value="light">Light</span>
+      </button>
     </div>
   </header>
   <main id="content">
@@ -31,42 +36,52 @@
       <ul class="project-list">
         <li>
           <a class="project-card" href="scaffolding-change-detection.html">
+            <span class="idx">01</span>
             <div>
-              <p class="meta">Navyug Infosolutions · ML intern · patent-pending</p>
+              <p class="meta">Navyug Infosolutions · Software engineering intern · Jun 2026 – present</p>
               <h3>Scaffolding change-detection pipeline</h3>
-              <p>Detect structural change in industrial scaffolding from time-separated 3D scans.</p>
+              <p>Patent-pending synthetic data for structural change detection, piloted on-site at a refinery.</p>
             </div>
-            <span class="project-stat">0.88 F1</span>
           </a>
         </li>
         <li>
           <a class="project-card" href="oncology-data-pipeline.html">
+            <span class="idx">02</span>
             <div>
-              <p class="meta">Johnson &amp; Johnson · undergraduate researcher</p>
+              <p class="meta">The Data Mine · Johnson &amp; Johnson · Aug 2025 – May 2026</p>
               <h3>Oncology data pipeline</h3>
-              <p>Join and validate large-scale oncology datasets before modeling and analysis.</p>
+              <p>Spec-driven clinical-trial tables at 10M+ cells, then Cox PH and LASSO survival models.</p>
             </div>
-            <span class="project-stat">10M+ cells</span>
           </a>
         </li>
         <li>
           <a class="project-card" href="wendway.html">
+            <span class="idx">03</span>
             <div>
-              <p class="meta">WendWay · co-founder, COO, developer</p>
+              <p class="meta">WendWay · Co-founder &amp; COO · Jun 2024 – Oct 2025</p>
               <h3>WendWay</h3>
-              <p>AI-compliance research shipped as a product and piloted with universities.</p>
+              <p>Writing-integrity product for higher education, from peer-reviewed research to university pilots.</p>
             </div>
-            <span class="project-stat">Deployed + piloted</span>
           </a>
         </li>
         <li>
           <a class="project-card" href="multi-agent-memory.html">
+            <span class="idx">04</span>
             <div>
               <p class="meta">Independent technical project</p>
-              <h3>Multi-agent shared-memory architecture</h3>
-              <p>A vector-database memory layer so multiple LLM agents can share context instead of working in isolation.</p>
+              <h3>Multi-Agent Research &amp; Analysis Team</h3>
+              <p>LangGraph demo: Researcher, Analyst, and Critic share an Endee workspace instead of only passing messages.</p>
             </div>
-            <span class="project-stat">Vector DB</span>
+          </a>
+        </li>
+        <li>
+          <a class="project-card" href="real-work.html">
+            <span class="idx">05</span>
+            <div>
+              <p class="meta">Catapult 2026 Hackathon</p>
+              <h3>real_work</h3>
+              <p>Isolated Docker labs in the browser — resume the exact workspace, not a LeetCode editor.</p>
+            </div>
           </a>
         </li>
       </ul>
@@ -75,8 +90,9 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <span>Aditya Ujwal</span>
-      <span>Site code only — no employer source.</span>
+      <span>No employer source on this site</span>
     </div>
   </footer>
+  <script src="../js/theme.js"></script>
 </body>
 </html>

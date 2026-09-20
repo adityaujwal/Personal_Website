@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="real_work, built at Catapult 2026 Hackathon: isolated Docker labs in the browser for real engineering work. Demo by Aditya Ujwal.">
+  <meta name="theme-color" content="#121518">
+  <title>real_work — Aditya Ujwal</title>
+  <script>(function(){try{var t=localStorage.getItem("au-theme");if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";}document.documentElement.setAttribute("data-theme",t);}catch(e){document.documentElement.setAttribute("data-theme","dark");}})();</script>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="../index.html"><span class="sig">AU</span> Aditya Ujwal</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" aria-current="page">Projects</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+      <button type="button" class="theme-toggle" data-theme-toggle>
+        <span data-theme-value="dark">Dark</span>
+        <span data-theme-value="light">Light</span>
+      </button>
+    </div>
+  </header>
+  <main id="content">
+    <div class="wrap">
+      <a class="back" href="index.html">← All projects</a>
+      <p class="kicker">Catapult 2026 Hackathon · marketplace of isolated engineering labs</p>
+      <h1 class="page-title">real_work</h1>
+      <p class="page-lead">Solve problems where they actually happen.</p>
+      <div class="metrics metrics-3" aria-label="Key results">
+        <div class="metric">
+          <span class="metric-id">Labs</span>
+          <span class="metric-value">Isolated</span>
+          <span class="metric-label">Full Linux environments in Docker, in the browser</span>
+        </div>
+        <div class="metric">
+          <span class="metric-id">Resume</span>
+          <span class="metric-value">docker commit</span>
+          <span class="metric-label">Leave and come back to the same terminal state</span>
+        </div>
+        <div class="metric">
+          <span class="metric-id">Publish</span>
+          <span class="metric-value">&lt; 1 min</span>
+          <span class="metric-label">GitHub URL to a ready-to-solve challenge</span>
+        </div>
+      </div>
+      <figure class="video">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/B6gr5WKtVsU"
+          title="real_work demo"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </figure>
+      <p class="viz-label"><a href="https://www.youtube.com/watch?v=B6gr5WKtVsU" rel="noopener noreferrer">Watch the demo on YouTube</a></p>
+      <article class="prose section">
+        <h2>Problem</h2>
+        <p>Engineering is more than passing a coding interview. You are not asked to invert a binary tree on a whiteboard; you debug a production race condition, optimize a slow query, or fix a broken CI/CD pipeline. Most practice platforms live in a LeetCode vacuum: a text editor and a prompt, disconnected from actual infrastructure. We wanted the environment to be as much of the challenge as the code.</p>
+        <h2>What it does</h2>
+        <p>real_work is a marketplace of engineering labs that run in fully isolated Docker containers. You get a full Linux environment, not just an editor, shown as a virtual desktop in the browser. Nothing to install; containers deploy in the cloud.</p>
+        <ul>
+          <li>Labs cover backend performance, distributed-systems debugging, DevOps, web, game dev, and penetration testing.</li>
+          <li>Progress persists: when you leave, the container state is committed to an image and stored on a cloud registry so you resume exactly where you stopped.</li>
+          <li>Authors can plug a custom grader into an API.</li>
+          <li>Anyone can publish a challenge from a GitHub repo or a portable Docker image. Users rate, comment, and discuss strategies.</li>
+        </ul>
+        <h2>How we built it</h2>
+        <p>We built real_work at the Catapult 2026 Hackathon. Next.js 15 (App Router) and Tailwind CSS on the front end. Supabase (PostgreSQL) for auth, real-time data, and storage for thumbnails and avatars. A custom Node.js / Docker orchestration layer manages container lifecycles, port mapping, and state persistence. The challenge creator is a multi-step wizard that parses a GitHub repo, extracts function signatures, and bakes author config into a reusable image.</p>
+        <h2>Hard parts</h2>
+        <p>Volume mounts were not enough for resume. We moved to a docker-commit workflow so progress survives sessions without bloating the database. Docker on Windows (PowerShell / WSL) vs Linux needed path sanitization and permission handling. Running arbitrary user code meant multi-layer isolation so containers stay sandboxed.</p>
+        <h2>Result</h2>
+        <p>A VM-like resume: close the browser, come back to the same terminal. A creator wizard that turns a raw GitHub URL into a solvable lab in under a minute. The whole solve path stays on the site. We learned the Docker Engine API (layering, commits, dynamic ports) and used Next.js Server Actions to launch containers without putting that work on the client.</p>
+        <h2>Next</h2>
+        <p>Multi-container labs (Kubernetes clusters, microservice meshes), live leaderboards for incident sprints, and company tracks that mirror an internal stack.</p>
+        <p class="note">No public repository.</p>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>Aditya Ujwal</span>
+      <span>No employer source on this site</span>
+    </div>
+  </footer>
+  <script src="../js/theme.js"></script>
+</body>
+</html>
