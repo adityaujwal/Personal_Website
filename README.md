@@ -1,4 +1,4 @@
-# Aditya Ujwal — portfolio
+# Aditya Ujwal portfolio
 
 Static HTML/CSS site for job applications. No build step, no JavaScript framework, no employer or startup source code.
 

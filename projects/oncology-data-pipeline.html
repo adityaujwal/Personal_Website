@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Oncology clinical-trial pipeline at Johnson &amp; Johnson / The Data Mine: exact match across 6 tables and 10M+ cells, then Cox PH and LASSO survival models. Aditya Ujwal, undergraduate AI developer.">
   <meta name="theme-color" content="#121518">
-  <title>Oncology data pipeline — Aditya Ujwal</title>
+  <title>Oncology data pipeline: Aditya Ujwal</title>
   <script>(function(){try{var t=localStorage.getItem("au-theme");if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";}document.documentElement.setAttribute("data-theme",t);}catch(e){document.documentElement.setAttribute("data-theme","dark");}})();</script>
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -78,9 +78,9 @@
       </figure>
       <article class="prose section">
         <h2>Problem</h2>
-        <p>Oncology analysis only works if records from different tables actually refer to the same cells and patients, and if the transformed outputs match a known spec. The data was clinical-trial scale — high-dimensional, split across sources, and large enough that silent join errors would poison anything downstream.</p>
+        <p>Oncology analysis only works if records from different tables actually refer to the same cells and patients, and if the transformed outputs match a known spec. The data was clinical-trial scale: high-dimensional, split across sources, and large enough that silent join errors would poison anything downstream.</p>
         <h2>Approach</h2>
-        <p>As an undergraduate AI developer in Purdue’s Data Mine partnership with Johnson &amp; Johnson, I built a spec-driven pipeline for oncology clinical-trial data. The pipeline had to match reference outputs exactly across six tables and more than 10 million cells. I worked with statisticians to validate the assumptions behind those matches — not just key equality.</p>
+        <p>As an undergraduate AI developer in Purdue’s Data Mine partnership with Johnson &amp; Johnson, I built a spec-driven pipeline for oncology clinical-trial data. The pipeline had to match reference outputs exactly across six tables and more than 10 million cells. I worked with statisticians to validate the assumptions behind those matches, not just key equality.</p>
         <p>On the cleaned set I modeled patient outcomes across treatment regimens using Cox proportional hazards and LASSO survival models in Python, and presented the results to clinical stakeholders.</p>
         <h2>Result</h2>
         <p>Exact match to reference outputs across six tables at 10M+ cells. Downstream modeling of treatment outcomes sat on that spec rather than stalling in wrangling. Patient data and research internals stay off this site.</p>

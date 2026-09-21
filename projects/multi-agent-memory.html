@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Multi-Agent Research &amp; Analysis Team: a LangGraph demo where Researcher, Analyst, Critic, and Coordinator share an Endee workspace. By Aditya Ujwal.">
   <meta name="theme-color" content="#121518">
-  <title>Multi-Agent Research &amp; Analysis Team — Aditya Ujwal</title>
+  <title>Multi-Agent Research &amp; Analysis Team: Aditya Ujwal</title>
   <script>(function(){try{var t=localStorage.getItem("au-theme");if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";}document.documentElement.setAttribute("data-theme",t);}catch(e){document.documentElement.setAttribute("data-theme","dark");}})();</script>
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -75,7 +75,7 @@
         <h2>Problem</h2>
         <p>LLM agents that only pass messages forget what the rest of the team already learned. Work gets duplicated, contradictions sit unnoticed, and the final brief is whatever happened to be in the last thread.</p>
         <h2>Approach</h2>
-        <p>I built a LangGraph demo in which a Coordinator routes Researcher, Analyst, and Critic agents on research tasks. They do not only chat. They read and write a shared workspace — findings, hypotheses, contradictions, decisions — so later steps can reuse prior work, flag conflicts, and consolidate into a brief.</p>
+        <p>I built a LangGraph demo in which a Coordinator routes Researcher, Analyst, and Critic agents on research tasks. They do not only chat. They read and write a shared workspace (findings, hypotheses, contradictions, decisions) so later steps can reuse prior work, flag conflicts, and consolidate into a brief.</p>
         <p>Memory is an Endee-backed SharedMemoryManager, with a NullMemoryManager for isolated benchmarks. The Coordinator can preempt to the Critic when the workspace shows contradictions. A mock LLM path runs the demo without a live model. A Streamlit panel shows workspace timelines. Benchmarks and threshold-tuning scripts sit next to a blog post and a demo notebook.</p>
         <h2>Result</h2>
         <p>Phases 1–6 are largely done: memory wiring, a live graph, benchmarks, and the write-up/demo. Two caveats I would mention in an interview: the cold-start Endee wipe was not fully validated, and duplicate-work metrics are not meaningful under the mock LLM.</p>
